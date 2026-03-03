@@ -9,7 +9,7 @@
     <h1> this is the html page</h1>
 
     <h1> user input  form </h1>
-    <form  method="post">
+    <form  method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <!-- 3 :name , mobile , email-->
         <label for="name">Name:</label>
@@ -21,7 +21,8 @@
         <label for="email">Email:</label>
         <input type="text" id="email" name="email"><br><br>
 
-        <label
+        <label for="file">upload file:</label>
+        <input type="file" id="file" name="file"><br><br>
 
         <input type="submit" value="Submit">
     </form>
