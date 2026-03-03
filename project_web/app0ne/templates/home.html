@@ -26,5 +26,18 @@
 
         <input type="submit" value="Submit">
     </form>
-</body>
+
+    <h1>user data:</h1>
+    {% for user in data %}
+        <h3>Name: {{ user.name }},mobile: {{ user.mobile }}, email: {{ user.email }}</h3>
+        {% if user.file %}
+           img:
+           <img src="{{ user.file.url }}" alt="User File">
+        {% endif %}
+        <br>
+    {% endfor %}
+
+
+    
+ </body>
 </html>
